@@ -1,24 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import { Context } from "./contexts/Context";
+import Login from "./pages/Login";
+import Home from './pages/Home';
+import Application from './pages/Application';
+import Documentation from './pages/Documentation';
+import React, { useState, useRef, useEffect, useContext } from "react";
 
 function App() {
+  const [username, setUsername] = useState("User");
+
+  const [animalApplication, setAnimalApplication] = useState("");
+
+  const [animal, setanimal] = useState({
+    loading: false,
+    animals: null,
+  });
+
+  
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    
+    <Context.Provider value={{ username, setUsername, animalApplication, setAnimalApplication, animal, setanimal}}>
+      <Switch>
+        <Route path='/' component={Login} exact />
+        <Route path='/home' component={Home} exact />
+        <Route path='/application' component={Application} exact />
+        <Route path='/documentation' component={Documentation} exact />
+      </Switch>
+     </Context.Provider>
+
+
   );
 }
 

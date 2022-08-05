@@ -1,38 +1,412 @@
-.App {
+html,
+body {
+  width: 100%;
+}
+
+.Animal {
+  padding-top: 20px;
+  border: 5px solid #77DD77;
+  border-radius: 10px;
+  background-color: #77DD77;
+  color: white;
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 20px;
   text-align: center;
+  margin-right: 60px;
+  margin-bottom: 60px;
+
+
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#sign-out {
+  transition: 1s;
+  color: white;
+  font-size: 1.1rem;
+  float: right;
+  margin-top: 1.2em;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#sign-out:hover {
+  font-size: 1.3rem;
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Animal h2 {
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.website-header {
+  height: 66px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #77DD77;
+  color: white;
+  font-weight: bold;
+
+}
+
+.animal-text {
+  font-weight: bold;
+}
+
+img {
+  margin-top: 10px;
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.login {
+  background-color: white;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: arial;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #77DD77;
+  transition: 1s;
+
+}
+
+.login:hover {
+  color: green;
+}
+
+
+.credentials {
+  height: 50px;
+  width: 200px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+#password {
+  margin-bottom: 40px;
+}
+
+.login-area {
+  height: 400px;
+  width: 400px;
+  background-color: #77DD77;
+  text-align: center;
+  margin-left: 37%;
+  margin-top: 6%;
+  border-radius: 10px;
+  border: none;
+}
+
+.login-header {
+  height: 66px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #77DD77;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
+.adopt-button {
+  margin-top: 20px;
+  background-color: white;
+  color: #77DD77;
+  font-family: 'arial';
+  width: 200px;
+  height: 50px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 1s;
+  padding: 10px;
+}
+
+.adopt-button-container {
+  margin-top: 20px;
+}
+
+.adopt-button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  color: green;
+}
+
+.adopt-button::after {
+  opacity: 0.5;
+}
+
+
+.application-form {
+  margin-top: 5%;
+  color: white;
+  background-color: #77DD77;
+  width: 600px;
+  height: 800px;
+  margin-left: 33%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.application-form p{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.application-form input {
+  height: 40px;
+}
+
+#first-name,
+#phone {
+  margin-right: 15px;
+}
+
+#address {
+  margin-top: 40px;
+  width: 500px;
+}
+
+#email,
+#phone {
+  margin-top: 40px;
+}
+
+#big-box {
+  margin-top: 100px;
+  height: 300px;
+  width: 500px;
+  border: 5px solid #77DD77;
+}
+
+legend {
+  text-align: center;
+  color: #77DD77;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#submit {
+  height: 50px;
+  width: 300px;
+  background-color: green;
+  color: white;
+  font-family: arial;
+  font-size: 30px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 1s;
+  border-radius: 10px;
+}
+
+#submit:hover {
+  opacity: 0.7;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.25);
+  font-size: 32px;
+}
+
+#add-button {
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #77DD77;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  transition: 1s;
+  border: none;
+}
+
+#add-button:hover {
+  background-color: green;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+.edit {
+  margin-top: 20px;
+  background-color: yellow;
+  color: #77DD77;
+  font-family: 'arial';
+  width: 130px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 1s;
+}
+.edit:hover{
+  color: green;
+}
+.delete {
+  float: right;
+  color: white;
+  border: none;
+  background-color: #77DD77;
+  font-size: 1em;
+  transition: 1s;
+  font-weight: bold;
+}
+.delete:hover{
+  color: red;
+}
+
+.application-input {
+  border-radius: 10px;
+}
+
+.filter-button {
+  margin-right: 10px;
+  background-color: #77DD77;
+  border: none;
+  border-radius: 10px; width: 100px;
+  color: white;
+  font-weight: bold;
+  transition: 1s;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
+
+
+}
+.filter-button:hover{
+  background-color: green;
+}
+.submit-modal{
+  background-color: #77DD77;
+}
+
+.modal-buttons{
+  border: none;
+  background-color: #77DD77;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  transition: 1s;
+}
+.modal-buttons:hover{
+  background-color: green;
+}
+.edit-form{
+  width: 80%;
+  height: 500px;
+}
+.edit-label{
+  color: #77DD77;
+  font-weight: bold;
+  margin-right: 40px;
+  font-size: 2em;
+}
+.edit-input{
+  height: 50px;
+  border: 3px solid #77DD77;
+  border-radius: 10px;
+  color: green;
+  font-size: 20px;
+}
+
+#contained-modal-title-vcenter{
+  color: #77DD77;
+  font-weight: bold;
+}
+.save-edit{
+  margin-left: 48%;
+  margin-top: 3%;
+}
+#name{
+  width: 70%;
+  margin-left: 25%;
+}
+#diet{
+  height: 120px;
+  width: 300px;
+  margin-left: 37%;
+}
+#lifespan{
+  margin-left: 42%;
+}
+.diet-label, .lifespan-label{
+  margin-top: 30px;
+}
+.diet-label{
+  margin-left: 55%;
+}
+.name-label{
+  margin-left: 52%;
+}
+.lifespan-label{
+  margin-left: 50%;
+}
+.home,.documentation{
+  color: white;
+  float: left;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 1s;
+  font-size: 2vw;
+}
+.home:hover,.documentation:hover{
+  font-size: 44px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.documentation-links{
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.documentation-headers{
+  margin-top: 20px;
+  text-decoration: underline;
+  margin-left: 30px;
+}
+.doc-container{
+  margin-left: 50px;
+}
+.documentation-container{
+  border: 3px solid #77DD77;
+  width: 50%;
+  font-size: 20px;
+  margin-top: 80px;
+  height: 30%;
+  border-radius: 10px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
