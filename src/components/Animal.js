@@ -3,9 +3,10 @@ import Add from './Animal'
 import { Context } from "../contexts/Context";
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal'
-import DeleteWarning from '../components/DeleteWarning'
-import EditModal from '../components/EditModal'
+import Modal from 'react-bootstrap/Modal';
+import DeleteWarning from '../components/DeleteWarning';
+import EditModal from '../components/EditModal';
+import animalcss from '../animal.module.css';
 function Animal(props) {
     // the edit and delete buttons are created here.
 
@@ -24,47 +25,47 @@ function Animal(props) {
 
 
     return (
-        <div className="Animal" key={a.id}>
-
-            <div className="card-content">
-                <DeleteWarning
-                    show={warningShow}
-                    onHide={() => setWarningShow(false)}
-                    animalid={a.id}
-
-                />
-                <button className="delete" onClick={() => {
-                    setWarningShow(true)
-                }}>X</button>
+        <div className={animalcss.Animal} key={a.id}>
 
 
-                <h2>{a.name}</h2>
+            <DeleteWarning
+                show={warningShow}
+                onHide={() => setWarningShow(false)}
+                animalid={a.id}
 
-                <img src={a.image_link} alt="An Animal" ></img><br></br>
-                <span className="animal-text">Life Span: {a.lifespan} years</span><br></br>
-                <span className="animal-text">Food: {a.diet}</span><br></br>
-                <span className="animal-text">Type: {a.animal_type}</span><br></br>
-
-
-                <div className="adopt-button-container">
-                    <Link className="adopt-button" to="/Application" onClick={() => {
-                        setAnimalApplication(a.id)
-                    }}>Adopt Now</Link>
-                </div>
-                <EditModal
-                    show={editShow}
-                    onHide={() => setEditShow(false)}
-                    a={a}
-
-                />
-
-                <button className="edit" onClick={() => {
-                    setEditShow(true)
-                }}>edit details</button>
+            />
+            <button className={animalcss.delete} onClick={() => {
+                setWarningShow(true)
+            }}>X</button>
 
 
+            <h2>{a.name}</h2>
 
+            <img src={a.image_link} alt="An Animal" ></img><br></br>
+            <span className={animalcss.animaltext}>Life Span: {a.lifespan} years</span><br></br>
+            <span className={animalcss.animaltext}>Food: {a.diet}</span><br></br>
+            <span className={animalcss.animaltext}>Type: {a.animal_type}</span><br></br>
+
+
+            <div className={animalcss.adoptbutton}>
+                <Link className={animalcss.adoptbuttontext} to="/Application" onClick={() => {
+                    setAnimalApplication(a.id)
+                }}>Adopt Now</Link>
             </div>
+            <EditModal
+                show={editShow}
+                onHide={() => setEditShow(false)}
+                a={a}
+
+            />
+
+            <button className={animalcss.edit} onClick={() => {
+                setEditShow(true)
+            }}>edit details</button>
+
+
+
+
         </div>
     )
 }

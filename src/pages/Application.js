@@ -1,29 +1,24 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { Context } from "../contexts/Context";
-import { Link } from 'react-router-dom';
+import { Link , NavLink} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from '../components/Modal'
 import Header from "../components/Header";
 
 function Application() {
-  const [modalShow, setModalShow] = React.useState(false);
-  const { animalApplication, animal, setanimal } = useContext(Context);
-  console.log(animalApplication)
+  const { animalApplication, animal, setModalShow , setAdoptedAnimalid} = useContext(Context);
 
   let animalName = "nothing";
-  console.log(animalName);
   animal.animals.map((animal) => {
     if (animal.id == animalApplication) {
       animalName = animal.name;
-      console.log(animalName);
     }
-    
-  })
-  //title/paragraph used to pass into modal as props to display a basic message
-  const title = "Application Recieved";
-  const paragraph = "Please be patient with us. It will take around 1-2 weeks to review your application.";
 
- 
+  })
+  
+  //title/paragraph used to pass into modal as props to display a basic message
+  
+
   return (
     <div>
       <Header></Header>
@@ -48,21 +43,14 @@ function Application() {
 
           </textarea>
           <br></br>
-          <Modal
-            show={modalShow}
-            onHide={() => {
-              setModalShow(false);
-              window.location.href = "./Home";
-            }}
-            title={title}
-            paragraph={paragraph}
-          />
+          
 
 
-          <Button type="button" id="submit" variant="primary" onClick={() => setModalShow(true)}>
-            Submit
-          </Button>
-
+  
+          <NavLink to="/Home" onClick={() =>{
+             setAdoptedAnimalid(animalApplication);
+             setModalShow(true);
+          }} id="submit"> Submit </NavLink>
 
 
 

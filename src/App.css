@@ -1,6 +1,7 @@
-html,
+/* html,
 body {
   width: 100%;
+  height: 100%;
 }
 
 .Animal {
@@ -23,6 +24,7 @@ body {
 
 
 }
+
 
 #sign-out {
   transition: 1s;
@@ -73,58 +75,6 @@ img {
 }
 
 
-.login {
-  background-color: white;
-  text-decoration: none;
-  font-size: 40px;
-  font-family: arial;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: #77DD77;
-  transition: 1s;
-
-}
-
-.login:hover {
-  color: green;
-}
-
-
-.credentials {
-  height: 50px;
-  width: 200px;
-  margin-top: 60px;
-  border-radius: 10px;
-}
-
-#password {
-  margin-bottom: 40px;
-}
-
-.login-area {
-  height: 400px;
-  width: 400px;
-  background-color: #77DD77;
-  text-align: center;
-  margin-left: 37%;
-  margin-top: 6%;
-  border-radius: 10px;
-  border: none;
-}
-
-.login-header {
-  height: 66px;
-  font-size: 40px;
-  text-align: center;
-  background-color: #77DD77;
-  color: white;
-  font-weight: bold;
-}
 
 
 
@@ -174,7 +124,8 @@ img {
   font-size: 20px;
 
 }
-.application-form p{
+
+.application-form p {
   font-size: 24px;
   font-weight: bold;
 }
@@ -203,6 +154,7 @@ img {
   height: 300px;
   width: 500px;
   border: 5px solid #77DD77;
+  margin-bottom: 30px;
 }
 
 legend {
@@ -227,6 +179,11 @@ legend {
   font-weight: bold;
   transition: 1s;
   border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
 }
 
 #submit:hover {
@@ -267,9 +224,11 @@ legend {
   border-radius: 10px;
   transition: 1s;
 }
-.edit:hover{
+
+.edit:hover {
   color: green;
 }
+
 .delete {
   float: right;
   color: white;
@@ -279,7 +238,8 @@ legend {
   transition: 1s;
   font-weight: bold;
 }
-.delete:hover{
+
+.delete:hover {
   color: red;
 }
 
@@ -291,25 +251,28 @@ legend {
   margin-right: 10px;
   background-color: #77DD77;
   border: none;
-  border-radius: 10px; width: 100px;
+  border-radius: 10px;
+  width: 100px;
   color: white;
   font-weight: bold;
   transition: 1s;
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  
+
 
 
 }
-.filter-button:hover{
+
+.filter-button:hover {
   background-color: green;
 }
-.submit-modal{
+
+.submit-modal {
   background-color: #77DD77;
 }
 
-.modal-buttons{
+.modal-buttons {
   border: none;
   background-color: #77DD77;
   font-size: 20px;
@@ -320,20 +283,24 @@ legend {
   font-weight: bold;
   transition: 1s;
 }
-.modal-buttons:hover{
+
+.modal-buttons:hover {
   background-color: green;
 }
-.edit-form{
+
+.edit-form {
   width: 80%;
   height: 500px;
 }
-.edit-label{
+
+.edit-label {
   color: #77DD77;
   font-weight: bold;
   margin-right: 40px;
   font-size: 2em;
 }
-.edit-input{
+
+.edit-input {
   height: 50px;
   border: 3px solid #77DD77;
   border-radius: 10px;
@@ -341,62 +308,86 @@ legend {
   font-size: 20px;
 }
 
-#contained-modal-title-vcenter{
+#contained-modal-title-vcenter {
   color: #77DD77;
   font-weight: bold;
 }
-.save-edit{
+
+.save-edit {
   margin-left: 48%;
   margin-top: 3%;
 }
-#name{
+
+#name {
   width: 70%;
   margin-left: 25%;
 }
-#diet{
+
+#diet {
   height: 120px;
   width: 300px;
   margin-left: 37%;
 }
-#lifespan{
+
+#lifespan {
   margin-left: 42%;
 }
-.diet-label, .lifespan-label{
+
+.diet-label,
+.lifespan-label {
   margin-top: 30px;
 }
-.diet-label{
+
+.diet-label {
   margin-left: 55%;
 }
-.name-label{
+
+.name-label {
   margin-left: 52%;
 }
-.lifespan-label{
+
+.lifespan-label {
   margin-left: 50%;
 }
-.home,.documentation{
+
+.home,
+.documentation {
   color: white;
-  float: left;
   margin-left: 20px;
   text-decoration: none;
   transition: 1s;
-  font-size: 2vw;
+  font-size: 30px;
 }
-.home:hover,.documentation:hover{
-  font-size: 44px;
+
+.documentation {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 2s;
+}
+
+.home:hover,
+.documentation:hover {
+  text-decoration: underline;
   color: white;
 }
-.documentation-links{
+
+.documentation-links {
   text-decoration: none;
 }
-.documentation-headers{
+
+.documentation-headers {
   margin-top: 20px;
   text-decoration: underline;
   margin-left: 30px;
 }
-.doc-container{
+
+.doc-container {
   margin-left: 50px;
 }
-.documentation-container{
+
+.documentation-container {
   border: 3px solid #77DD77;
   width: 50%;
   font-size: 20px;
@@ -410,3 +401,7 @@ legend {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+ */

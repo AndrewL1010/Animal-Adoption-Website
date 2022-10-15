@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 import Modal from '../components/Modal'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FilterButton from '../components/FilterButton'
+import FilterButton from '../components/FilterButton';
+import home from '../home.module.css';
+import filtercss from '../filter.module.css';
 
 
 function App() {
@@ -21,17 +23,23 @@ function App() {
   };
   const FILTER_NAMES = Object.keys(FILTER_MAP);
   const [filter, setFilter] = useState('All');
-  const { username, animal, setanimal } = useContext(Context);
+  const { username, animal, setanimal, modalShow, setModalShow, adoptedAnimalid } = useContext(Context);
   const [addAnimalShow, setAddAnimalShow] = React.useState(false);
 
   //title/paragraph used to pass into modal as props to display a basic message
-  const title = "Added Animals";
-  const paragraph = "A new animal has been added for adoption!";
+  const addedTitle = "Added Animals";
+  const addedText = "A new animal has been added for adoption!";
+
+  const applicationTitle = "Application Recieved";
+  const applicationText = "Please be patient with us. It will take around 1-2 weeks to review your application.";
 
 
+  function handleDelete(id) {
+    const remainingAnimals = animal.animals.filter(animal => id != animal.id);
+    setanimal({ animals: remainingAnimals })
+  }
 
 
-  
   useEffect(() => {
     // this async function is not executed yet,
     async function fetchData() {
@@ -63,7 +71,7 @@ function App() {
         // if the length is 0 that means no animals actually exist so we execute the api function to get 6 new animals
         if (animalList.length == 0) {
           fetchData();
-    
+
         }
         else {
           //if the length is not 0 that means there are at least 1 animal in local storage that we need to display
@@ -120,7 +128,7 @@ function App() {
 
 
 
- 
+
 
   const filterList = FILTER_NAMES.map(name => (
     <FilterButton
@@ -136,19 +144,28 @@ function App() {
     <div className="todoapp stack-large">
       <Header username={username}></Header>
       {/* this is the list of possible filters the user can click to display*/}
-      {filterList}
+      <div className={filtercss.filtercontainer}>{filterList}</div>
       <Modal
         show={addAnimalShow}
         //this is the add button at the bottom right of the homepage, when the user clicks, it will execute this function that adds a new animal
         onClick={handleAdd}
         onHide={() => setAddAnimalShow(false)}
-        title={title}
-        paragraph={paragraph}
+        title={addedTitle}
+        paragraph={addedText}
 
       />
-      
-      <Animals isLoading={animal.loading} animals={animal.animals} FILTER_MAP={FILTER_MAP} filter={filter}/>
-      
+      <Modal
+        show={modalShow}
+        onHide={() => {
+          handleDelete(adoptedAnimalid);
+          setModalShow(false);
+        }}
+        title={applicationTitle}
+        paragraph={applicationText}
+      />
+
+      <Animals isLoading={animal.loading} animals={animal.animals} FILTER_MAP={FILTER_MAP} filter={filter} />
+
 
       <Button id="add-button" variant="primary" onClick={() => setAddAnimalShow(true)}>
         Add Animal

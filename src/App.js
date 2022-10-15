@@ -11,8 +11,9 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 function App() {
   const [username, setUsername] = useState("User");
 
-  const [animalApplication, setAnimalApplication] = useState("");
-
+  const [animalApplication, setAnimalApplication] = useState(null);
+  const[adoptedAnimalid, setAdoptedAnimalid] = useState("");
+  const [modalShow, setModalShow] = React.useState(false);
   const [animal, setanimal] = useState({
     loading: false,
     animals: null,
@@ -25,7 +26,7 @@ function App() {
   return (
 
     
-    <Context.Provider value={{ username, setUsername, animalApplication, setAnimalApplication, animal, setanimal}}>
+    <Context.Provider value={{ username, setUsername, animalApplication, setAnimalApplication, animal, setanimal, modalShow, setModalShow, adoptedAnimalid, setAdoptedAnimalid}}>
       <Switch>
         <Route path='/' component={Login} exact />
         <Route path='/home' component={Home} exact />

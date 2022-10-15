@@ -1,0 +1,192 @@
+.login {
+    background-color: slategrey;
+    cursor: pointer;
+    transition: 1s;
+    width: 240px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 36px;
+    position: relative;
+    border-radius: 6px;
+    transition: 1s;
+  }
+  
+  .login:hover {
+    opacity: 0.7;
+  }
+  
+  .loginlink {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+  }
+  
+  .loginlink:hover {
+    color: white;
+  }
+  
+  
+  .credentials,
+  #password {
+    height: 36px;
+    width: 240px;
+  }
+  
+  .credentials {
+    margin-top: 20%;
+  }
+  
+  #password {
+    margin-top: 5%;
+  }
+  
+  .loginarea {
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10%;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .loginheader {
+    height: 100px;
+    background-color: slategrey;
+    text-align: center;
+    position: relative;
+  
+  }
+  
+  .loginheader h2 {
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  
+  }
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?nfi2ne');
+    src:  url('fonts/icomoon.eot?nfi2ne#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?nfi2ne') format('truetype'),
+      url('fonts/icomoon.woff?nfi2ne') format('woff'),
+      url('fonts/icomoon.svg?nfi2ne#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cog:before {
+    content: "\e994";
+  }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-youtube2:before {
+    content: "\ea9e";
+  }
+  .youtube::before{
+    content: "\ea9e";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: slategrey;
+    font-size: 20px;
+  }
+  .twitter::before{
+    content: "\ea96";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: slategrey;
+    font-size: 20px;
+  }
+  .socials a{
+    transition: 1s;
+    margin: 20px;
+    text-decoration: none;
+  
+  
+  }
+  .youtube:hover, .twitter:hover, .facebook:hover{
+    opacity: 0.5;
+  }
+  .facebook::before{
+    content: "\ea91";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: slategrey;
+    font-size: 20px;
+  }
+  .socials{
+    margin-top: 5%;
+  
+  }
+  #myVideo{
+    height: calc(100% - 100px);
+    position: absolute;
+    object-fit: fill;
+    width: 100%;
+  }
+  .documentation {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 1s;
+    font-size: 30px;
+  }
+  
+  .documentation {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 2s;
+  }
+  .documentation:hover {
+    text-decoration: underline;
+    color: white;
+  }

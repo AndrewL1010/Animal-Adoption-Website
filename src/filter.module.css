@@ -1,0 +1,22 @@
+.filtercontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+
+}
+.filterbutton{
+    justify-content: center;
+    margin: 30px;
+    width: 100px;
+    background-color: slategrey;
+    color: white;
+    border: none;
+    font-weight: bold;
+    height: 34px;
+    border-radius: 4px;
+    transition: 1s;
+}
+.filterbutton:hover{
+    opacity: 0.5;
+}

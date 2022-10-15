@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+.Animal {
+    background-color: slategrey;
+    width: 450px;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    height: 500px;
+    border-radius: 4px;
+}
+.delete{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: slategrey;
+    font-size: 20px;
+    transition: 1s;
+}
+.delete:hover{
+    opacity: 0.5;
+}
+.edit{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    width: 100px;
+    border-radius: 4px;
+    color: slategrey;
+    font-weight: bold;
+}
+
+img {
+    width: 350px;
+    height: 250px;
+}
+h2{
+    color: white;
+}
+.animaltext{
+    color: white;
+    font-weight: bold;
+}
+.adoptbutton{
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 100px;
+    border-radius: 4px;
+    font-weight: bold;
+
+}
+.adoptbuttontext{
+    color: slategrey;
+    text-decoration: none;
+
+}
+.edit,.adoptbuttontext{
+    transition: 1s;
+
+}
+.edit:hover,.adoptbuttontext:hover{
+    color: rgba(0, 0, 0, 0.3);
+
+}
+

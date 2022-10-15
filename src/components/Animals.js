@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import Animal from './Animal'
 import { Context } from "../contexts/Context";
+import animalcss from '../animal.module.css';
 const Animals = (props) => {
   // we pass in FILTER_MAP and filter from home to filter out the animals in this component instead
   const { animals, isLoading, FILTER_MAP, filter } = props;
@@ -13,7 +14,7 @@ const Animals = (props) => {
 
 
   return (
-    <div className="container">
+    <div className={animalcss.container}>
 
       {!isLoading && animals.
       filter(FILTER_MAP[filter])
